@@ -26,7 +26,7 @@ const Home: React.FC = () => {
         { Animals.map((animal) => (
             <Card>
                 <p>{animal}</p>
-                <img className="rounded-2xl" src="https://i.imgflip.com/50unao.png?a466320" />
+                <img className="rounded-2xl" alt="an awesome man" src="https://i.imgflip.com/50unao.png?a466320" />
             </Card>
         ))}
         </div>
