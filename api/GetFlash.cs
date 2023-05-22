@@ -14,7 +14,7 @@ namespace backend
     {
         [FunctionName("GetFlash")]
         public static async Task<IActionResult> Run(
-            [HttpTrigger(AuthorizationLevel.Function, "get", Route = "flash")] HttpRequest req,
+            [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "flash")] HttpRequest req,
             ILogger log)
         {
             log.LogInformation("Client requested flash.");
