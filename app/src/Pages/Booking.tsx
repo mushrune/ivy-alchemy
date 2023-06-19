@@ -1,11 +1,18 @@
 import React from 'react';
 import '../App.css';
 import '../output.css';
-import Card from "../Components/Card";
+import Container from "../Components/Container";
+import VerifyBlock from "../Components/FormSections/Verify/VerifyBlock";
+import PersonalInfoBlock from "../Components/FormSections/PersonalInfo/PersonalInfoBlock";
+import TattooInfoBlock from "../Components/FormSections/TattooInfo/TattooInfoBlock";
 
 const Booking: React.FC = () => {
     return (
-        <Card><h1>This is my booking : )</h1></Card>
+        <Container>
+            <VerifyBlock />
+            <PersonalInfoBlock />
+            <TattooInfoBlock />
+        </Container>
     )
 }
 

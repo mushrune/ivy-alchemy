@@ -1,7 +1,8 @@
 import React from 'react';
 import '../App.css';
 import '../output.css';
-import Card from "../Components/Card";
+import Container from "../Components/Container";
+import Header from "../Components/Widgets/Header";
 /*
 The home page will contain the following components:
 1. A profile card that contains some info about Ivy
@@ -9,11 +10,11 @@ The home page will contain the following components:
  */
 const About: React.FC = () => {
     return(
-        <Card>
-            <h1>Hi! I'm Ivy</h1>
+        <Container>
+            <Header text="Hi! I'm Ivy" />
             <br />
-            <p className="text-justify">I'm a tattoo artist working in Portland OR, and I specialize in creating creatures of all sorts for people of all sorts!</p>
-        </Card>
+            <p className="text-justify text-white">I'm a tattoo artist working in Portland OR, and I specialize in creating creatures of all sorts for people of all sorts!</p>
+        </Container>
     )
 }
 
