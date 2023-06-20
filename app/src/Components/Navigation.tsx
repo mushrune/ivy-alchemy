@@ -46,7 +46,7 @@ const Navigation: React.FC = () => {
             fixed top-0 left-0 z-50"
             >
                 { backButton &&
-                    <div className="fixed inset-0 flex items-center justify-center z-50 mt-24" >
+                    <div className="fixed inset-0 flex items-center justify-center z-50 mt-24 h-fit" >
                         <Link
                             to="/"
                             className="m-2 px-3 py-2 left-0 rounded-md text-white bg-green-500 text-2xl"
