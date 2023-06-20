@@ -14,22 +14,28 @@ namespace backend
     {
         [FunctionName("GetFlash")]
         public static async Task<IActionResult> Run(
-            [HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)] HttpRequest req,
+            [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "flash")] HttpRequest req,
             ILogger log)
         {
-            log.LogInformation("C# HTTP trigger function processed a request.");
+            log.LogInformation("Client requested flash.");
 
-            string name = req.Query["name"];
+            string[] names = new[]
+            {
+                "dog",
+                "cat",
+                "lion",
+                "mouse",
+                "bear",
+                "bird",
+                "humming bird",
+                "flowers",
+                "lillypads",
+                "beetle"
+            };
 
-            string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
-            dynamic data = JsonConvert.DeserializeObject(requestBody);
-            name = name ?? data?.name;
-
-            string responseMessage = string.IsNullOrEmpty(name)
-                ? "This HTTP triggered function executed successfully. Pass a name in the query string or in the request body for a personalized response."
-                : $"Hello, {name}. This HTTP triggered function executed successfully.";
-
-            return new OkObjectResult(responseMessage);
+            string namesJson = JsonConvert.SerializeObject(names);
+            
+            return new OkObjectResult(namesJson);
         }
     }
 }
