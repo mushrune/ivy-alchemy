@@ -1,16 +1,8 @@
 import React, { useState } from 'react';
 import Header from "../../Widgets/Header";
 import Input from "../../Widgets/Input";
-import Checkbox from "../../Widgets/Checkbox";
-import FavoriteColorBlock from "./FavoriteColorBlock";
 
 const PersonalInfoBlock: React.FC = () => {
-    const [ isLegalName, setIsLegalName ] = useState<boolean>( false );
-
-    const handleIsLegalName = ( checked: boolean ) => {
-        setIsLegalName(checked);
-    }
-
     return(
         <div className="
         ">

@@ -1,7 +1,6 @@
 import React from 'react';
 import Input from "../../Widgets/Input";
 import Button from "../../Widgets/Button";
-import { AiFillPhone } from "react-icons/ai";
 
 const VerifyEmail: React.FC = () => {
     return(
